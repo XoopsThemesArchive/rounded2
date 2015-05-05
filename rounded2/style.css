@@ -1,0 +1,114 @@
+/***** COULEURS ********/
+div#header{background:#FFF}
+div#header{background-image:url('images/headerbg.png');}
+div#header h1{color: #FFF}
+
+div#footer {background:#E5E5E5}
+div#footer p{color: #666}
+
+/*Menu a onglets*/ 
+ul#nav a{background: #129DE8;color:#FFF}
+ul#nav a:hover{background: #A3CCFC;color:#2960C1}
+ul#nav li.activelink a,ul#nav li.activelink a:hover{background: #A3CCFC;color:#2960C1}
+
+div#login{background:#E5E5E5}
+
+div#page{background:#FFF}
+
+div#gauche{background:#FFF;}
+div#gauche h3{color:#FFF;background:#2E8FC6;}
+div.blockl {background:#FFF;}
+div.blockl-outer{background:#A3CFEC;}
+
+div#welcome{color:#FFF;background:#C5BFBA;}
+
+div#droite{background:#AFBFBF;}
+div#droite h3{color:#5C90AC;background:#FFF;}
+div.blockr {background:#FFF;}
+
+/*Boîtes d'intro*/ 
+li.intro1{background:#E57412}
+li.intro3{background:#E59F12}
+ul#intro h3{color:#FFF}
+
+/*Conteneur et blocks centre-centre*/
+div#block-cc {background:#A3CFEC;}
+div#block-cc h3{color:#E57412;background:#FFF;/*background-image:url('images/headerbg.png');background-position:bottom left;*/}
+div.blockcc {background:#FFF;}
+
+/*Modules ($Xoops_content)*/
+div#xcontent h2{color: #007BC4;}
+
+/**********************/
+/**********************/
+
+html,body {padding:0;margin:0;font:100% Verdana,Arial,sans-serif}
+
+h1,h2,h3 {font-family:georgia}
+div#header {width:100%;height:80px;position:fixed;z-index:100}
+div#header {_position:relative;}
+
+div#menu {width:770px;margin-left:300px;}
+ul#nav,ul#nav li{list-style-type:none;margin:0;padding:0;}
+ul#nav{float:left;font-size: 80%;}
+ul#nav li{float:left;margin-left: 3px;text-align: center}
+ul#nav a{float:left;width: 120px;padding: 2px 0;text-decoration:none;}
+
+form#search{float:right;margin-right:5px;margin-top:5px;}
+
+div#login{position:relative;font-size:60%;text-align:center;}
+div#login input{vertical-align:middle;}
+.formButton {height:15px;}
+
+div#page{
+border-top:90px solid #FFF;
+border-left:185px solid #FFF;
+border-right:175px solid #FFF;}
+div#page{_border-top:20px solid #FFF;}
+
+div#page2{
+border-top:100px solid #FFF;
+border-left:185px solid #FFF;
+border-right:20px solid #FFF;}
+div#page2{_border-top:20px solid #FFF;}
+
+div#page-in {
+ margin:0;
+ width:100%;_width:99%;
+}
+div#page>div#page-in {}
+
+
+div#gauche{float:left;position:relative;width:170px;margin-left:-180px;margin-top:10px;}
+div#gauche h3{width:158px;font-weight:bold;margin-top:0;margin-bottom:2px;padding:4px 2px 4px 2px;font-size:70%;text-align:center}
+div.blockl {width:158px;padding:4px 2px 4px 2px;font-size:70%;}
+div.blockl-outer{width:162px;padding:4px 4px 4px 4px;margin-bottom:10px;}
+
+div#welcome {width:120px;padding:4px 2px 4px 2px;margin-bottom:10px;margin-left:20px;text-align:center;font-size:70%;position:relative}
+
+div#droite{float:right;position:relative;width:160px;margin-right:-165px;margin-bottom:10px;margin-top:10px;}
+div#droite{_margin-right:-170px;_margin-left:5px}
+div#droite h3{width:148px;font-weight:bold;margin-left:4px;margin-top:4px;margin-bottom:4px;padding:4px 2px 4px 2px;font-size:70%;text-align:center}
+div.blockr {width:152px;margin-bottom:10px;margin-top:5px;margin-left:2px;padding:4px 2px 4px 2px;font-size:70%;}
+
+div#centre{width:100%;float:left;overflow:hidden;margin-right:5px;margin-bottom:20px;}
+
+ul#intro,ul#intro li{list-style-type:none;margin:0;padding:0}
+ul#intro{width:100%;float:left;overflow:hidden;margin-bottom:10px;margin-top:10px;}
+ul#intro li{float:left;width:49%!important;margin-right:2%;padding: 10px 0}
+ul#intro li.intro3{margin-right:0;}
+ul#intro p,ul#intro h3{margin:0;padding: 0 10px;font-size:80%;}
+ul#intro h3{text-transform:uppercase;padding-bottom:3px;font-size:90%;}
+
+div#block-cc {width:100%;float:left;overflow:hidden;margin-bottom:20px;}
+div#block-cc h3{width:50%;font-weight:bold;margin:5px 5px 2px 10px;padding:4px;font-size:100%;}
+div.blockcc {width:auto;margin-bottom:10px;margin-top:2px;margin-left:5px;margin-right:5px;padding:4px 2px 4px 2px;font-size:75%;}
+
+div#xcontent {width:100%;float:left;overflow:hidden;font-size:70%;padding:4px;}
+div#xcontent h2{margin: 10px 0;font-size:100%;}
+
+
+
+
+div#footer {width:auto;margin:10px 0 10px 0;clear:both;text-align:center;padding:10px 0 10px 0}
+div#footer p{font-size:60%;margin:0}

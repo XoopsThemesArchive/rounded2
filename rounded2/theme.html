@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}>-<{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+<script type="text/javascript" src="<{$xoops_imageurl}>niftycube.js"></script>
+<script type="text/javascript" src="<{$xoops_imageurl}>niftylayout.js"></script>
+<script defer type="text/javascript" src="<{$xoops_imageurl}>pngfix.js"></script>
+
+</head>
+
+<body>
+
+<div id="header">
+<img src="<{$xoops_imageurl}>images/logo.png" align="left" alt=""/>
+<!-- Menu à onglets -->
+<div id="menu">
+<ul id="nav">
+<li id="home" class="activelink"><a href="<{$xoops_url}>">Accueil</a></li>
+<li id="articles"><a href="<{$xoops_url}>/modules/news">Documentations</a></li>
+<li id="forum"><a href="<{$xoops_url}>/modules/newbb">Forum</a></li>
+<li id="download"><a href="<{$xoops_url}>/modules/mydownloads">downloads</a></li>
+</ul>
+</div>
+<form id="search" action="<{$xoops_url}>/search.php" method="post">
+<input class="button" type="text" name="query" size="10" />
+<input type="hidden" name="action" value="results" />
+<input name="submit" type="submit" class="gumb" value="chercher" />
+</form>
+
+
+</div>
+
+<div id="<{if $xoops_showrblock == 1}>page<{else}>page2<{/if}>">
+<div id="page-in"> 
+
+<!-- Blocs Gauche -->
+<div id="gauche">
+<{if $xoops_isuser}>
+<div id="welcome">
+Bienvenue<br/><a href="<{$xoops_url}>/user.php"><{$xoops_uname}></a>
+</div>
+<{/if}>
+
+<{foreach name=blockl item=block from=$xoops_lblocks}> 
+<div class="blockl-outer">
+<h3><{$block.title}></h3>
+<div class="blockl">
+<{$block.content}>
+</div>
+</div>
+<{/foreach}>
+</div>
+
+<div id="centre">
+
+<{if not $xoops_isuser}>
+<div id="login">
+<form action="<{$xoops_url}>/user.php" method="post" style="margin: 5px;">
+Pseudo : <input class="formButton" type="text" name="uname" size="10"  />
+Mot de passe : <input class="formButton" type="password" name="pass" size="10"  />&nbsp;
+<input type="hidden" name="op" value="login" />
+<input class="Go" type="submit" value="Go !" />&nbsp;&nbsp;
+<a href="<{$xoops_url}>/register.php"> Créer un compte</a>
+</form>
+</div>
+<{/if}>
+
+<!-- **** Boîtes d'intro **** -->
+<{if $xoops_showcblock == 1}>
+<ul id="intro">
+<{foreach item=block from=$xoops_clblocks}> 
+<li class="intro1">
+<h3><{$block.title}></h3><p><{$block.content}></p></li>
+<{/foreach}>
+<{foreach item=block from=$xoops_crblocks}> 
+<li class="intro3">
+<h3><{$block.title}></h3><p><{$block.content}></p></li>
+<{/foreach}>
+</ul>
+<{/if}>
+
+<div id="xcontent"><{$xoops_contents}></div>
+
+<!-- *****Boucle d'affichage des blocs Centre-centre***** --> 
+<{if $xoops_showcblock == 1}>
+<div id="block-cc">
+<{foreach item=block from=$xoops_ccblocks}> 
+<h3><{$block.title}></h3> 
+<div class="blockcc"><{$block.content}></div>
+<{/foreach}>
+</div>
+<{/if}>
+
+</div>
+
+<!-- Blocs Droite -->
+<{if $xoops_showrblock == 1}>
+<div id="droite">
+<{foreach item=block from=$xoops_rblocks}> 
+<h3><{$block.title}></h3>
+<div class="blockr">
+<{$block.content}>
+</div>
+<{/foreach}>
+</div>
+<{/if}>
+
+</div>
+</div>
+
+<div id="footer"><p><{$xoops_footer}><br/>Thème <a href="http://www.mercowart.com">Mercowart/<a href="http://xmad.mercowart.com">Xmad</a></p></div>
+
+</body>
+</html>

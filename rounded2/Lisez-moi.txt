@@ -1,0 +1,11 @@
+IMPORTANT !!!
+
+A MODIFIER:
+
+A la ligne 37 du javascript niftycube.js il y a un appel à une feuille de style niftycorners.css.
+
+Le chemin d'accés à ce fichier doit être écrit en chemin absolu sans variable xoops :
+
+NON : href","<{xoops-imageurl}>niftycorners.css"
+
+OUI : href","http://monsite/themes/rounded/niftycorners.css"
